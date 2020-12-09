@@ -1,0 +1,26 @@
+{
+  "name": "discord-ps5-alert-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengzhang/discord-ps5-alert-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lengzhang/discord-ps5-alert-bot/issues"
+  },
+  "homepage": "https://github.com/lengzhang/discord-ps5-alert-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {}
+}
