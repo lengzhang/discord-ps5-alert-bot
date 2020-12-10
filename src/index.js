@@ -19,6 +19,7 @@ client.on('ready', () => {
     log(`Logged in as ${client.user.tag}!`)
 
     directPS5C.setClient(client)
+    directPS5C.main()
     log('Direct PS5C set client')
 })
 

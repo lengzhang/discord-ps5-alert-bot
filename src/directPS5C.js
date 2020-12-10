@@ -79,7 +79,7 @@ const getStatus = () => {
 /********** Main Loop **********/
 const timeout = [2, 2, 2, 5, 5, 10]
 let counter = 0
-;(async () => {
+const main = async () => {
     while (true) {
         try {
             const res = await axios.get(ITEM_API)
@@ -91,9 +91,10 @@ let counter = 0
         await wait(timeout[counter % (timeout.length - 1)] * 1000)
         counter++
     }
-})()
+}
 
 export default (() => ({
+    main,
     setClient,
     addChannel,
     removeChannel,
