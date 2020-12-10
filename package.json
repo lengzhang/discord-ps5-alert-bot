@@ -2,9 +2,13 @@
   "name": "discord-ps5-alert-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node src/index.js",
+    "start:headless": "node src/index.js --headless",
+    "dev": "nodemon --watch src/**/*.js",
+    "dev:headless": "nodemon --watch src/**/*.js --exec npm run start:headless"
   },
   "repository": {
     "type": "git",
@@ -18,9 +22,13 @@
   },
   "homepage": "https://github.com/lengzhang/discord-ps5-alert-bot#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "puppeteer": "^5.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
