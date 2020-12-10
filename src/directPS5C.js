@@ -51,12 +51,16 @@ const setDetail = async (product) => {
         price: product?.price,
         updateAt: Date.now(),
     }
-    const status = getStatus()
-    log(status)
+    log(
+        `${detail.name}: ${
+            detail.stock === 'outOfStock' ? 'Out of Stock' : 'In Stock'
+        }`
+    )
     if (discordClient === null) return
 
     if (prevStock === detail.stock) return
     // send notice when stock update
+    const status = getStatus()
     channels.forEach((channel) => {
         discordClient.channels.cache.get(channel).send(status)
     })
